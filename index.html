@@ -142,192 +142,497 @@
 </section>
 
 <section id="katalog" class="catalog-section">
-    <div class="container">
-      <div class="text-center mb-5 fade-up">
-        <div class="section-label">PRODUK KAMI</div>
-        <h2 class="section-heading text-center">Katalog Produk</h2>
+  <div class="container">
+    <div class="text-center mb-5 fade-up">
+      <div class="section-label">PRODUK KAMI</div>
+      <h2 class="section-heading text-center">Katalog Produk</h2>
+    </div>
+
+    <ul class="nav nav-pills justify-content-center mb-5 fade-up" id="katalog-tabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active catalog-tab" id="tab-urea" data-bs-toggle="pill" data-bs-target="#content-urea" type="button" role="tab">Pupuk Urea</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link catalog-tab" id="tab-npk" data-bs-toggle="pill" data-bs-target="#content-npk" type="button" role="tab">Pupuk NPK</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link catalog-tab" id="tab-lain" data-bs-toggle="pill" data-bs-target="#content-lain" type="button" role="tab">Pupuk Lainnya</button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="katalog-tabsContent">
+      
+      <div class="tab-pane active" id="content-urea" role="tabpanel">
+        <div class="row g-4">
+          
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/nitreaureagranuldanprillpkt_50kg.png" alt="Nitrea Urea Granul" class="product-image"></div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">Nitrea Urea Granul</div>
+                    <p class="product-desc">Pupuk nitrogen (46% N) dengan bentuk butiran besar (granul), pelepasan hara lebih lambat dan efisien.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Nitrea Urea Granul" data-img="src/images/nitreaureagranuldanprillpkt_50kg.png" data-fulldesc="Nitrea Urea Granul mengandung 46% unsur hara Nitrogen (N). Karena bentuknya yang granul (butiran besar), pupuk ini memiliki sifat slow-release (pelepasan nutrisi perlahan). Hal ini membuatnya tidak mudah menguap atau hanyut oleh air hujan, sehingga penyerapan oleh tanaman lebih maksimal. Sangat cocok untuk tanaman pangan dan perkebunan. Kemasan 50 KG.">
+                        Lihat Detail
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/nitreaureagranuldanprillpkt_50kg.png" alt="Nitrea Urea Prill" class="product-image"></div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">Nitrea Urea Prill</div>
+                    <p class="product-desc">Pupuk nitrogen (46% N) dengan bentuk butiran halus (prill), sangat cepat larut dan diserap oleh tanah.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Nitrea Urea Prill" data-img="src/images/nitreaureagranuldanprillpkt_50kg.png" data-fulldesc="Nitrea Urea Prill juga mengandung unsur hara Nitrogen (N) sebesar 46%. Berbeda dengan granul, tipe prill memiliki butiran yang lebih halus sehingga lebih cepat larut dalam air dan langsung diserap oleh tanah. Sangat direkomendasikan untuk pemupukan susulan yang membutuhkan reaksi cepat dari tanaman. Kemasan 50 KG.">
+                        Lihat Detail
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
-      <div class="row g-4" id="productGrid">
-        
-        <div class="col-12 fade-up catalog-item">
-          <div class="product-card-horizontal">
-            <div class="row g-0 h-100">
-              <div class="col-md-3">
-                <div class="product-img-wrap h-100 img-left">
-                  <img src="src/images/nitreaureagranuldanprillpkt_50kg.png" alt="Nitrea Urea Granul" class="product-image">
+      <div class="tab-pane" id="content-npk" role="tabpanel">
+        <div class="row g-4">
+          
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/in1npkkebomas15_15_15.png" alt="NPK Kebomas 15-15-15" class="product-image"></div>
                 </div>
-              </div>
-              <div class="col-md-9">
-                <div class="product-body h-100 d-flex flex-column justify-content-center">
-                  <div class="product-name" style="font-size: 1.4rem;">Nitrea Urea Granul</div>
-                  <p class="product-desc">Pupuk nitrogen berkualitas tinggi untuk meningkatkan hasil pertanian. Dirancang dengan teknologi granulasi...</p>
-                  <div>
-                    <button class="btn-outline-blue detail-btn" style="width: fit-content;"
-                      data-bs-toggle="modal" 
-                      data-bs-target="#productModal"
-                      data-title="Nitrea Urea Granul"
-                      data-img="src/images/nitreaureagranuldanprillpkt_50kg.png"
-                      data-fulldesc="Pupuk Nitrea Urea Granul mengandung 46% Nitrogen. Sangat cocok untuk tanaman pangan, hortikultura, dan perkebunan. Keunggulan granulasi membuatnya tidak mudah menguap dan lebih lambat larut, sehingga penyerapan nutrisi oleh tanaman menjadi lebih maksimal dan efisien. Kemasan tersedia dalam 50 KG.">
-                      Lihat Detail
-                    </button>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">NPK Kebomas 15-15-15</div>
+                    <p class="product-desc">Pupuk majemuk berimbang untuk merangsang pertumbuhan tunas, cabang, daun, dan pembentukan akar.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="NPK Kebomas 15-15-15" data-img="src/images/in1npkkebomas15_15_15.png" data-fulldesc="NPK Kebomas 15-15-15 mengandung hara makro primer seimbang (Nitrogen 15%, Fosfat 15%, Kalium 15%). Menjadikan daun tanaman lebih hijau dan segar, memacu pertumbuhan akar yang kuat, serta meningkatkan kualitas dan daya simpan hasil panen.">
+                        Lihat Detail
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-12 fade-up catalog-item">
-          <div class="product-card-horizontal">
-            <div class="row g-0 h-100">
-              <div class="col-md-3 order-md-2">
-                <div class="product-img-wrap h-100 img-right">
-                  <img src="src/images/nitreaureagranuldanprillpkt_50kg.png" alt="Nitrea Urea Prill" class="product-image">
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/in1petroningratNPK12_11_20.png" alt="Petroningrat NPK 12-11-20" class="product-image"></div>
                 </div>
-              </div>
-              <div class="col-md-9 order-md-1">
-                <div class="product-body h-100 d-flex flex-column justify-content-center">
-                  <div class="product-name" style="font-size: 1.4rem;">Nitrea Urea Prill</div>
-                  <p class="product-desc">Pupuk nitrogen berkualitas tinggi dengan bentuk prill (butiran kecil) yang mudah larut dalam air...</p>
-                  <div>
-                    <button class="btn-outline-blue detail-btn" style="width: fit-content;"
-                      data-bs-toggle="modal" 
-                      data-bs-target="#productModal"
-                      data-title="Nitrea Urea Prill"
-                      data-img="src/images/nitreaureagranuldanprillpkt_50kg.png"
-                      data-fulldesc="Nitrea Urea Prill adalah pupuk dengan butiran halus yang lebih cepat larut dan diserap oleh tanah. Sangat direkomendasikan untuk pemupukan dasar maupun susulan. Mengandung unsur hara Nitrogen (N) sebesar 46%.">
-                      Lihat Detail
-                    </button>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">Petroningrat NPK 12-11-20</div>
+                    <p class="product-desc">Pupuk spesialis Kalium tinggi (20%) untuk memaksimalkan pembesaran dan kualitas buah/umbi.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Petroningrat NPK 12-11-20" data-img="src/images/in1petroningratNPK12_11_20.png" data-fulldesc="Diformulasikan khusus dengan kandungan Kalium tinggi, Petroningrat NPK 12-11-20 sangat efektif diaplikasikan pada fase pembuahan. Pupuk ini mencegah kerontokan bunga, meningkatkan rendemen, menambah kemanisan buah, dan membuat hasil panen seperti tembakau dan bawang merah lebih berkualitas.">
+                        Lihat Detail
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-12 fade-up catalog-item">
-          <div class="product-card-horizontal">
-            <div class="row g-0 h-100">
-              <div class="col-md-3">
-                <div class="product-img-wrap h-100 img-left">
-                  <img src="src/images/npkphonskaplus_16_16_16_50kg.png" alt="NPK Phonska Plus 16-16-16" class="product-image">
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/in1petronitratNPK16-16-16.png" alt="Petronitrat NPK 16-16-16" class="product-image"></div>
                 </div>
-              </div>
-              <div class="col-md-9">
-                <div class="product-body h-100 d-flex flex-column justify-content-center">
-                  <div class="product-name" style="font-size: 1.4rem;">NPK Phonska Plus 16-16- 16</div>
-                  <p class="product-desc">Pupuk NPK dengan bentuk prill (butiran kecil) yang mudah larut dalam air...</p>
-                  <div>
-                    <button class="btn-outline-blue detail-btn" style="width: fit-content;"
-                      data-bs-toggle="modal" 
-                      data-bs-target="#productModal"
-                      data-title="NPK Phonska Plus 16-16-16"
-                      data-img="src/images/npkphonskaplus_16_16_16_50kg.png"
-                      data-fulldesc="NPK Phonska Plus 16-16-16 adalah pupuk lengkap yang mengandung Nitrogen (N), Fosfor (P), dan Kalium (K) dalam rasio 16-16-16. Sangat cocok untuk berbagai jenis tanaman. Keunggulan granulasi membuatnya tidak mudah menguap dan lebih lambat larut, sehingga penyerapan nutrisi oleh tanaman menjadi lebih maksimal dan efisien. Kemasan tersedia dalam 50 KG.">
-                      Lihat Detail
-                    </button>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">Petronitrat NPK 16-16-16</div>
+                    <p class="product-desc">Mengandung Nitrogen bentuk Nitrat yang sangat mudah diserap untuk pertumbuhan vegetatif instan.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Petronitrat NPK 16-16-16" data-img="src/images/in1petronitratNPK16-16-16.png" data-fulldesc="Kelebihan utama Petronitrat adalah kandungan Nitrogen dalam bentuk Nitrat. Formula ini sangat cepat diserap oleh akar tanpa harus menunggu proses penguraian di dalam tanah, memberikan efek penghijauan daun dan percepatan pertumbuhan secara instan.">
+                        Lihat Detail
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-12 fade-up catalog-item">
-          <div class="product-card-horizontal">
-            <div class="row g-0 h-100">
-              <div class="col-md-3 order-md-2">
-                <div class="product-img-wrap h-100 img-right">
-                  <img src="src/images/npkphonskaplus_15_15_6_4.png" alt="NPK Phonska Plus 15-15-6+4" class="product-image">
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/in1phonskaplusnpk15_15_15.png" alt="Phonska Plus NPK 15-15-15" class="product-image"></div>
                 </div>
-              </div>
-              <div class="col-md-9 order-md-1">
-                <div class="product-body h-100 d-flex flex-column justify-content-center">
-                  <div class="product-name" style="font-size: 1.4rem;">NPK Phonska Plus 15-15-6+4</div>
-                  <p class="product-desc">Pupuk NPK dengan bentuk prill (butiran kecil) yang mudah larut dalam air...</p>
-                  <div>
-                    <button class="btn-outline-blue detail-btn" style="width: fit-content;"
-                      data-bs-toggle="modal" 
-                      data-bs-target="#productModal"
-                      data-title="NPK Phonska Plus 15-15-6+4"
-                      data-img="src/images/npkphonskaplus_15_15_6_4.png"
-                      data-fulldesc="NPK Phonska Plus 15-15-6+4 adalah pupuk lengkap yang mengandung Nitrogen (N), Fosfor (P), Kalium (K), dan Magnesium (Mg) dalam rasio 15-15-6+4. Sangat cocok untuk berbagai jenis tanaman. Keunggulan granulasi membuatnya tidak mudah menguap dan lebih lambat larut, sehingga penyerapan nutrisi oleh tanaman menjadi lebih maksimal dan efisien. Kemasan tersedia dalam 50 KG.">
-                      Lihat Detail
-                    </button>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">Phonska Plus NPK 15-15-15</div>
+                    <p class="product-desc">Diperkaya dengan unsur mikro Zinc (Zn) untuk mengoptimalkan enzim dan daya tahan tanaman.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Phonska Plus NPK 15-15-15" data-img="src/images/in1phonskaplusnpk15_15_15.png" data-fulldesc="Selain hara makro (15-15-15) yang diperkaya Sulfur, Phonska Plus memiliki tambahan unsur mikro esensial Zinc (Zn) sebesar 2.000 ppm. Sangat krusial untuk mencegah pertumbuhan tanaman yang kerdil dan menjaga daya tahan komoditas dari hama/penyakit.">
+                        Lihat Detail
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-12 fade-up catalog-item">
-          <div class="product-card-horizontal">
-            <div class="row g-0 h-100">
-              <div class="col-md-3">
-                <div class="product-img-wrap h-100 img-left">
-                  <img src="src/images/npkphonskaplus_12_12_17+2mg.png" alt="NPK Phonska Plus 12-12-17+2Mg" class="product-image">
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/in1pupukmajemukphonskaalam.png" alt="Pupuk Majemuk Phonska Alam" class="product-image"></div>
                 </div>
-              </div>
-              <div class="col-md-9">
-                <div class="product-body h-100 d-flex flex-column justify-content-center">
-                  <div class="product-name" style="font-size: 1.4rem;">NPK Phonska Plus 12-12-17+2Mg</div>
-                  <p class="product-desc">Pupuk NPK dengan bentuk prill (butiran kecil) yang mudah larut dalam air...</p>
-                  <div>
-                    <button class="btn-outline-blue detail-btn" style="width: fit-content;"
-                      data-bs-toggle="modal" 
-                      data-bs-target="#productModal"
-                      data-title="NPK Phonska Plus 12-12-17+2Mg"
-                      data-img="src/images/npkphonskaplus_12_12_17+2mg.png"
-                      data-fulldesc="NPK Phonska Plus 12-12-17+2%Mg adalah pupuk lengkap yang mengandung Nitrogen (N), Fosfor (P), Kalium (K), dan Magnesium (Mg) dalam rasio 12-12-17+2%Mg. Sangat cocok untuk berbagai jenis tanaman. Keunggulan granulasi membuatnya tidak mudah menguap dan lebih lambat larut, sehingga penyerapan nutrisi oleh tanaman menjadi lebih maksimal dan efisien. Kemasan tersedia dalam 50 KG.">
-                      Lihat Detail
-                    </button>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">Pupuk Majemuk Phonska Alam</div>
+                    <p class="product-desc">Kombinasi bahan organik dan mineral alam yang ramah lingkungan untuk keberlanjutan struktur tanah.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Pupuk Majemuk Phonska Alam" data-img="src/images/in1pupukmajemukphonskaalam.png" data-fulldesc="Phonska Alam diformulasikan khusus untuk memperbaiki struktur biologi tanah. Perpaduan organik dan bahan tambang mineral terpilih membuat lahan pertanian tetap subur dan gembur untuk ditanami secara berkelanjutan (sustainable agriculture).">
+                        Lihat Detail
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-12 fade-up catalog-item">
-          <div class="product-card-horizontal">
-            <div class="row g-0 h-100">
-              <div class="col-md-3 order-md-2">
-                <div class="product-img-wrap h-100 img-right">
-                  <img src="src/images/npkphonskaplus_15_8_15.png" alt="NPK Phonska Plus 15-8-15" class="product-image">
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/npkphonskaplus_16_16_16_50kg.png" alt="NPK Phonska Plus 16-16-16" class="product-image"></div>
                 </div>
-              </div>
-              <div class="col-md-9 order-md-1">
-                <div class="product-body h-100 d-flex flex-column justify-content-center">
-                  <div class="product-name" style="font-size: 1.4rem;">NPK Phonska Plus 15-8-15</div>
-                  <p class="product-desc">Pupuk NPK dengan bentuk prill (butiran kecil) yang mudah larut dalam air...</p>
-                  <div>
-                    <button class="btn-outline-blue detail-btn" style="width: fit-content;"
-                      data-bs-toggle="modal" 
-                      data-bs-target="#productModal"
-                      data-title="NPK Phonska Plus 15-8-15"
-                      data-img="src/images/npkphonskaplus_15_8_15.png"
-                      data-fulldesc="NPK Phonska Plus 15-8-15 adalah pupuk lengkap yang mengandung Nitrogen (N), Fosfor (P), Kalium (K), dan Magnesium (Mg) dalam rasio 15-8-15. Sangat cocok untuk berbagai jenis tanaman. Keunggulan granulasi membuatnya tidak mudah menguap dan lebih lambat larut, sehingga penyerapan nutrisi oleh tanaman menjadi lebih maksimal dan efisien. Kemasan tersedia dalam 50 KG.">
-                      Lihat Detail
-                    </button>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">NPK Phonska Plus 16-16-16</div>
+                    <p class="product-desc">Formula hara majemuk 16-16-16 untuk memberikan nutrisi seimbang ekstra yang siap diserap.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="NPK Phonska Plus 16-16-16" data-img="src/images/npkphonskaplus_16_16_16_50kg.png" data-fulldesc="Varian Phonska Plus dengan komposisi yang sedikit lebih tinggi (16%). Memastikan suplai energi, protein, dan gula dalam jaringan tanaman tercukupi sejak masa semai hingga panen. Hadir dalam bentuk granul yang mudah diaplikasikan.">
+                        Lihat Detail
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/npkphonskaplus_15_15_6_4.png" alt="NPK Phonska Plus 15-15-6+4" class="product-image"></div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">NPK Phonska Plus 15-15-6+4</div>
+                    <p class="product-desc">Spesialis fase awal (Vegetatif) dengan Nitrogen tinggi dan tambahan Magnesium (Mg) untuk zat hijau daun.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="NPK Phonska Plus 15-15-6+4" data-img="src/images/npkphonskaplus_15_15_6_4.png" data-fulldesc="Pupuk ini dirancang khusus dengan rasio Kalium sedang (6%) namun kaya akan Magnesium (4%). Magnesium adalah inti pembentukan Klorofil. Sangat baik digunakan pada awal musim tanam agar warna daun lebih hijau pekat dan proses fotosintesis berjalan maksimal.">
+                        Lihat Detail
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/npkphonskaplus_12_12_17+2mg.png" alt="NPK Phonska Plus 12-12-17+2Mg" class="product-image"></div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">NPK Phonska Plus 12-12-17+2Mg</div>
+                    <p class="product-desc">Spesialis fase pembuahan (Generatif) untuk mencegah kerontokan, bunga sepi, dan buah kerdil.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="NPK Phonska Plus 12-12-17+2Mg" data-img="src/images/npkphonskaplus_12_12_17+2mg.png" data-fulldesc="Dengan kandungan Kalium yang disesuaikan menjadi 17% dan ekstra Magnesium 2%, pupuk ini paling direkomendasikan saat tanaman mulai berbunga. Meningkatkan bobot butir, umbi, hingga menjaga warna buah tetap cerah dan menarik.">
+                        Lihat Detail
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/npkphonskaplus_15_8_15.png" alt="NPK Phonska Plus 15-8-15" class="product-image"></div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">NPK Phonska Plus 15-8-15</div>
+                    <p class="product-desc">Formula hemat Fosfat untuk mengembalikan kesuburan lahan yang sudah terakumulasi P tinggi.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="NPK Phonska Plus 15-8-15" data-img="src/images/npkphonskaplus_15_8_15.png" data-fulldesc="Khusus dirancang untuk lahan pertanian atau sawah yang sudah kaya akan unsur Fosfat. Dengan menurunkan kandungan P menjadi 8%, pemupukan menjadi jauh lebih efisien, hemat biaya, tanpa mengorbankan kualitas pertumbuhan (tetap disokong N dan K sebesar 15%).">
+                        Lihat Detail
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
-      <div class="text-center mt-5">
-        <button id="loadMoreBtn" class="btn-primary-custom d-none">
-          Lihat Semua Katalog <i class="bi bi-chevron-down ms-1"></i>
-        </button>
+      <div class="tab-pane" id="content-lain" role="tabpanel">
+        <div class="row g-4">
+          
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/in1kapurpertaniankebomas.png" alt="Kapur Pertanian Kebomas" class="product-image"></div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">Kapur Pertanian Kebomas</div>
+                    <p class="product-desc">Pembenah tanah (Dolomit) berkualitas tinggi untuk menetralkan pH tanah masam secara efektif.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Kapur Pertanian Kebomas" data-img="src/images/in1kapurpertaniankebomas.png" data-fulldesc="Kapur Pertanian (Dolomit) Kebomas digunakan untuk mengatasi tanah ber-pH rendah (masam) yang sering menghambat penyerapan pupuk. Selain menaikkan pH, kapur ini mengandung Kalsium (Ca) dan Magnesium (Mg) yang menetralkan racun Alumunium di dalam tanah.">
+                        Lihat Detail
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/in1petrocas.png" alt="Petrocas" class="product-image"></div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">Petrocas</div>
+                    <p class="product-desc">Soil Conditioner (Kalsium Sulfat) yang memperbaiki sifat fisik tanah yang keras dan menggumpal.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Petrocas" data-img="src/images/in1petrocas.png" data-fulldesc="Petrocas adalah terobosan pembenah tanah berbasis Kalsium Sulfat (CaSO4). Sangat manjur untuk menggemburkan tanah liat berat, mengurangi busuk ujung buah (blossom end rot) pada tomat atau cabe, dan memperbaiki kualitas tanah yang sering terendam air.">
+                        Lihat Detail
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/in1petronpsniphos.png" alt="Petro NPS Niphos" class="product-image"></div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">Petro NPS Niphos</div>
+                    <p class="product-desc">Kombinasi nutrisi Nitrogen, Fosfat, dan Sulfur (tanpa Kalium) dalam satu butiran majemuk.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Petro NPS Niphos" data-img="src/images/in1petronpsniphos.png" data-fulldesc="Petro NPS (Nitrogen, Fosfat, Sulfur) Niphos adalah pupuk majemuk khusus tanpa Kalium. Sangat direkomendasikan untuk fase vegetatif (awal tanam) atau untuk diaplikasikan pada lahan pertanian yang dari sananya sudah banyak mengandung unsur Kalium alami.">
+                        Lihat Detail
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/in1petrosp26.png" alt="Petro SP-26" class="product-image"></div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">Petro SP-26</div>
+                    <p class="product-desc">Pupuk Super Phosphate (26% P2O5) handal untuk memperkuat perakaran dan batang.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Petro SP-26" data-img="src/images/in1petrosp26.png" data-fulldesc="Mengandung unsur Fosfor (P2O5) sebesar 26%. Petro SP-26 sangat baik digunakan sebagai pupuk dasar sebelum tanam. Membantu menstimulasi perakaran bibit muda, memperkuat struktur batang agar tahan rebah, dan mempercepat pembungaan.">
+                        Lihat Detail
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/in1petrosp36.png" alt="Petro SP-36" class="product-image"></div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">Petro SP-36</div>
+                    <p class="product-desc">Pupuk Super Phosphate konsentrasi tinggi (36% P2O5) spesialis pendorong produktivitas lahan.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Petro SP-36" data-img="src/images/in1petrosp36.png" data-fulldesc="Merupakan versi premium dengan kadar Fosfat tinggi (36%). Berperan sangat krusial dalam pembelahan sel tanaman, pembentukan energi ATP, serta memastikan buah dan biji-bijian terbentuk secara padat dan masif.">
+                        Lihat Detail
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/in1petrozaplus.png" alt="Petro ZA Plus" class="product-image"></div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">Petro ZA Plus</div>
+                    <p class="product-desc">Pupuk Ammonium Sulfat (21% N, 24% S) plus Zinc untuk mendongkrak rasa dan aroma komoditas.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Petro ZA Plus" data-img="src/images/in1petrozaplus.png" data-fulldesc="Pupuk andalan untuk komoditas bernilai tinggi. Kombinasi Nitrogen, Sulfur, dan Zinc (Zn) ini sangat cocok digunakan pada bawang merah, bawang putih, atau tembakau untuk menajamkan aroma, rasa, serta memperbaiki warna panen.">
+                        Lihat Detail
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/in1phosgreen.png" alt="Phosgreen" class="product-image"></div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">Phosgreen</div>
+                    <p class="product-desc">Alternatif pupuk fosfat inovatif yang ramah lingkungan dan bebas limbah berbahaya.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Phosgreen" data-img="src/images/in1phosgreen.png" data-fulldesc="Phosgreen diformulasikan untuk memenuhi kebutuhan hara Fosfat tanaman dengan tingkat efisiensi penyerapan yang lebih tinggi. Produk inovatif ini meminimalkan residu bahan kimia berat, sangat mendukung konsep Green Agriculture.">
+                        Lihat Detail
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/in1pupukzapetro.png" alt="Pupuk ZA Petro" class="product-image"></div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">Pupuk ZA Petro</div>
+                    <p class="product-desc">Sumber nutrisi Nitrogen dan Sulfur berbentuk kristal putih murni pembasmi gejala daun kuning.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Pupuk ZA Petro" data-img="src/images/in1pupukzapetro.png" data-fulldesc="Pupuk Ammonium Sulfat standar (21% N, 24% S). Sangat ampuh digunakan untuk mencegah kelainan warna daun (klorosis/kekuningan akibat kurang belerang). Bentuknya yang kristal membuatnya sangat mudah larut dan bereaksi pada tanaman.">
+                        Lihat Detail
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 catalog-item">
+            <div class="product-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-3">
+                  <div class="product-img-wrap h-100 img-left"><img src="src/images/in1pupukzkpetro.png" alt="Pupuk ZK Petro" class="product-image"></div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-body h-100 d-flex flex-column justify-content-center">
+                    <div class="product-name" style="font-size: 1.4rem;">Pupuk ZK Petro</div>
+                    <p class="product-desc">Pupuk Kalium Sulfat bebas klorida untuk komoditas buah-buahan, sayur premium, dan tembakau.</p>
+                    <div>
+                      <button class="btn-outline-blue detail-btn" style="width: fit-content;" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Pupuk ZK Petro" data-img="src/images/in1pupukzkpetro.png" data-fulldesc="Pupuk ZK (Zwavelzure Kali) Petro mensuplai 50% K2O. Keunggulan utamanya adalah 'Bebas Klorida' (Cl-free). Sangat penting bagi tanaman sensitif seperti tembakau (agar daun tembakau mudah terbakar), jeruk, kentang, dan melon agar rasanya jauh lebih manis dan segar.">
+                        Lihat Detail
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </div>
+  </div>
 </section>
+
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content" style="border-radius: 12px; overflow: hidden; border: none;">
+      
+      <div class="modal-header" style="background-color: var(--brand-blue); color: #fff; border-bottom: none;">
+        <h5 class="modal-title" id="productModalLabel" style="color: #fff; font-weight: 700;">Detail Produk</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <div class="modal-body p-4 p-md-5">
+        <div class="row align-items-center">
+          <div class="col-md-5 mb-4 mb-md-0 text-center">
+            <img src="" id="modalImg" alt="Gambar Produk" class="img-fluid rounded" style="max-height: 300px; object-fit: contain;">
+          </div>
+          <div class="col-md-7">
+            <h3 id="modalTitle" style="color: var(--brand-blue); font-weight: 800; margin-bottom: 16px;">Nama Produk</h3>
+            <p id="modalDesc" style="color: var(--text-muted); line-height: 1.8; font-size: 0.95rem;">Deskripsi...</p>
+            
+            <div class="mt-4">
+              <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Adhigana,%20saya%20ingin%20bertanya%20seputar%20produk..." target="_blank" class="btn-primary-custom d-inline-flex align-items-center justify-content-center gap-2 text-decoration-none py-3">
+                <i class="bi bi-whatsapp"></i> Hubungi via WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <section id="contact" class="contact-section">
     <div class="container">

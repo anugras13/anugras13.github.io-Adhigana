@@ -39,46 +39,10 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-/* ── 1. LOGIKA MAX 6 PRODUK & TOMBOL LOAD MORE ── */
+/* ── LOGIKA POP-UP / MODAL DETAIL PRODUK ── */
 document.addEventListener("DOMContentLoaded", function() {
-  const catalogItems = document.querySelectorAll('.catalog-item');
-  const loadMoreBtn = document.getElementById('loadMoreBtn');
-  let isExpanded = false;
-  const MAX_ITEMS = 6;
-
-  // Jika produk lebih dari 6, sembunyikan sisanya dan munculkan tombol
-  if (catalogItems.length > MAX_ITEMS) {
-    loadMoreBtn.classList.remove('d-none');
-    
-    // Sembunyikan item ke 7 dan seterusnya
-    catalogItems.forEach((item, index) => {
-      if (index >= MAX_ITEMS) {
-        item.style.display = 'none';
-      }
-    });
-
-    // Event saat tombol ditekan
-    loadMoreBtn.addEventListener('click', function() {
-      isExpanded = !isExpanded;
-      
-      catalogItems.forEach((item, index) => {
-        if (index >= MAX_ITEMS) {
-          item.style.display = isExpanded ? 'block' : 'none';
-        }
-      });
-
-      if (isExpanded) {
-        loadMoreBtn.innerHTML = 'Tampilkan Lebih Sedikit <i class="bi bi-chevron-up ms-1"></i>';
-      } else {
-        loadMoreBtn.innerHTML = 'Lihat Semua Katalog <i class="bi bi-chevron-down ms-1"></i>';
-        // Scroll kembali ke atas katalog agar tidak bingung
-        document.getElementById('katalog').scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  }
-
-  /* ── 2. LOGIKA POP-UP / MODAL DETAIL PRODUK ── */
   const productModal = document.getElementById('productModal');
+  
   if (productModal) {
     productModal.addEventListener('show.bs.modal', function (event) {
       // Menangkap tombol yang diklik
