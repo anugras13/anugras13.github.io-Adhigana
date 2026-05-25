@@ -515,5 +515,17 @@ a {
     font-size: 0.9rem !important; /* Ukuran standar teks bacaan di HP */
     text-align: justify !important; /* Memaksa rata kanan-kiri */
     line-height: 1.6 !important; /* Jarak antar baris supaya tidak terlalu rapat */
+    
+  }
+  .product-image {
+    /* Memastikan gambar tidak dipaksa load ukuran aslinya yang besar */
+    width: 100%;
+    height: auto;
+    /* Memberikan instruksi ke browser untuk rendering lebih ringan */
+    will-change: transform; 
+    /* Mengaktifkan kompresi visual agar tetap tajam meski file aslinya besar */
+    image-rendering: -webkit-optimize-contrast;
   }
 }
+
+  
