@@ -189,10 +189,25 @@ a {
 /* ══════════════════════════════════════════════════════
    5. HERO SECTION
 ══════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════════════
+   5. HERO SECTION (Dengan Background Gambar & Overlay Biru)
+══════════════════════════════════════════════════════ */
 .hero-section {
-  background-color: var(--brand-blue);
+  /* Ganti tulisan bg-pabrik.jpg dengan nama file gambarmu nanti */
+  background-image: 
+    linear-gradient(rgba(40, 83, 148, 0.473), rgba(20, 45, 80, 0.95)), 
+    url('src/images/gudanggresikwllpaper.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Bikin efek parallax (gambar diam saat di-scroll) */
+  background-repeat: no-repeat;
+  
   min-height: 80vh;
   color: #fff;
+  
+  /* Flexbox untuk memastikan teks selalu di tengah */
+  display: flex;
+  align-items: center; 
 }
 
 .hero-title {
