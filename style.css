@@ -231,6 +231,8 @@ a {
 ══════════════════════════════════════════════════════ */
 .about-section {
   background-color: var(--bg-white);
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
 
 .about-lead {
@@ -243,12 +245,14 @@ a {
 .about-text-body p {
   color: var(--text-muted);
   margin-bottom: 16px;
+  text-align: justify !important;
 }
 
 .about-feature-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  text-align: justify !important;
 }
 
 .feature-item {
@@ -541,4 +545,35 @@ a {
   line-height: 1.6; /* Spasi antar baris sama dengan P */
   margin-bottom: 12px; /* Jarak antar baris sama dengan P */
 }
+/* --- CSS TAMBAHAN UNTUK PARTNERS & CLIENTS --- */
+@media (min-width: 768px) {
+  /* Memberikan garis pembatas di tengah kolom hanya saat di desktop */
+  .col-md-6:first-child {
+    border-right: 1px solid #e2e8f0;
+  }
+}
+
+/* Holding (Paling Gede) */
+.holding-logo .client-logo { height: 85px !important; }
+
+/* Standard logo */
+.client-logo { height: 45px; width: auto; object-fit: contain; }
+
+/* Baris 1: Petro, Kujang, PIM (Gedein dikit) */
+.logo-gede { height: 55px !important; }
+
+/* Baris 2: Pusri (Ukuran standar) */
+.logo-pusri-biasa { height: 45px !important; }
+
+/* Baris 3: PKT (Kecilin) */
+.logo-pkt-kecil { height: 35px !important; }
+
+/* Wrapper biar tiap baris rapi */
+.client-logo-wrapper {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
   
