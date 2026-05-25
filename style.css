@@ -1,0 +1,439 @@
+/* ══════════════════════════════════════════════════════
+   1. CSS VARIABLES (Corporate Light Theme)
+══════════════════════════════════════════════════════ */
+:root {
+  /* Brand Colors */
+  --brand-blue: #285494; 
+  --brand-blue-dark: #1e4072;
+  --brand-gold: #eab308; 
+  --brand-gold-hover: #ca8a04;
+
+  /* Neutrals */
+  --bg-white: #ffffff;
+  --bg-light: #f8fafc; 
+  
+  /* Text Colors */
+  --text-main: #1e293b; 
+  --text-muted: #64748b; 
+  
+  /* Fonts */
+  --font-main: 'Inter', sans-serif;
+}
+
+/* ══════════════════════════════════════════════════════
+   2. BASE & GLOBAL TYPOGRAPHY
+══════════════════════════════════════════════════════ */
+*, *::before, *::after { 
+  box-sizing: border-box; 
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-white);
+  color: var(--text-main);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--brand-blue);
+  margin-bottom: 0.5rem;
+}
+
+section { 
+  padding: 90px 0; 
+}
+
+a { 
+  text-decoration: none; 
+  transition: 0.2s; 
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--brand-gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-heading {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--brand-blue);
+  margin-bottom: 24px;
+}
+
+.section-heading.text-center { 
+  margin-bottom: 40px; 
+}
+
+/* ══════════════════════════════════════════════════════
+   3. BUTTONS
+══════════════════════════════════════════════════════ */
+.btn-primary-custom {
+  display: inline-block;
+  background-color: var(--brand-gold);
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: 6px;
+  border: none;
+  transition: all 0.2s;
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--brand-gold-hover);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(234, 179, 8, 0.3);
+}
+
+.btn-outline-blue {
+  background: transparent;
+  color: var(--brand-blue);
+  border: 1px solid var(--brand-blue);
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-outline-blue:hover {
+  background: var(--brand-blue);
+  color: #fff;
+}
+
+/* ══════════════════════════════════════════════════════
+   4. NAVBAR & HEADER
+══════════════════════════════════════════════════════ */
+#mainNavbar {
+  background-color: var(--bg-white);
+  padding: 16px 0;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: box-shadow 0.3s;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  color: var(--brand-blue) !important;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.brand-text {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--brand-blue);
+  line-height: 1.2;
+}
+
+.nav-link {
+  color: var(--text-main) !important;
+  font-weight: 500;
+  font-size: 0.9rem;
+  position: relative;
+  padding: 8px 0 !important;
+  margin: 0 12px;
+}
+
+.nav-link:hover {
+  color: var(--brand-blue) !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--brand-gold);
+  transition: 0.3s;
+}
+
+.nav-link.active::after, 
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-toggler { border: none; }
+.navbar-toggler:focus { box-shadow: none; }
+
+/* Responsive Navbar untuk HP */
+@media (max-width: 768px) {
+  .brand-logo {
+    width: 36px;
+    height: 36px;
+  }
+  .brand-text {
+    font-size: 0.85rem;
+    max-width: 180px;
+    white-space: normal;
+  }
+}
+
+/* ══════════════════════════════════════════════════════
+   5. HERO SECTION
+══════════════════════════════════════════════════════ */
+.hero-section {
+  background-color: var(--brand-blue);
+  min-height: 80vh;
+  color: #fff;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin-bottom: 36px;
+}
+
+/* ══════════════════════════════════════════════════════
+   6. ABOUT SECTION
+══════════════════════════════════════════════════════ */
+.about-section {
+  background-color: var(--bg-white);
+}
+
+.about-lead {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--text-main);
+  margin-bottom: 24px;
+}
+
+.about-text-body p {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.about-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.feature-icon {
+  width: 45px;
+  height: 45px;
+  background-color: var(--brand-blue);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.feature-content h4 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: var(--brand-blue);
+}
+
+.feature-content p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════════════════
+   7. CATALOG SECTION (Horizontal Zig-Zag)
+══════════════════════════════════════════════════════ */
+.catalog-section {
+  background-color: var(--bg-light);
+}
+
+.product-card-horizontal {
+  background: var(--bg-white);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.product-card-horizontal:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(40, 84, 148, 0.08);
+  border-color: rgba(40, 84, 148, 0.2);
+}
+
+/* Kotak Pembungkus Gambar */
+.product-card-horizontal .product-img-wrap {
+  height: 100%;
+  min-height: 240px;
+  background-color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px; 
+}
+
+/* Garis Pembatas Kiri / Kanan */
+.product-card-horizontal .img-left { border-right: 1px solid #e2e8f0; }
+.product-card-horizontal .img-right { border-left: 1px solid #e2e8f0; }
+
+/* Gambar Produknya */
+.product-card-horizontal .product-image {
+  max-width: 100%;
+  max-height: 220px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.product-card-horizontal:hover .product-image {
+  transform: scale(1.08);
+}
+
+/* Kotak Teks */
+.product-card-horizontal .product-body {
+  padding: 32px;
+}
+
+.product-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--brand-blue);
+  margin-bottom: 12px;
+}
+
+.product-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+/* Responsive Khusus Katalog Horizontal */
+@media (max-width: 767px) {
+  .product-card-horizontal .img-left,
+  .product-card-horizontal .img-right {
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .product-card-horizontal .product-img-wrap,
+  .product-card-horizontal .product-body {
+    padding: 24px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════
+   8. CONTACT SECTION
+══════════════════════════════════════════════════════ */
+.contact-section { 
+  background-color: var(--bg-white); 
+}
+
+.contact-card {
+  background: var(--bg-white);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.form-control {
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+}
+
+.form-control:focus {
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 3px rgba(40, 84, 148, 0.1);
+}
+
+/* ══════════════════════════════════════════════════════
+   9. FOOTER
+══════════════════════════════════════════════════════ */
+.footer {
+  padding: 24px 0;
+  background-color: var(--bg-light);
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.85rem;
+}
+
+/* ══════════════════════════════════════════════════════
+   10. ANIMATIONS & GENERAL RESPONSIVE TWEAKS
+══════════════════════════════════════════════════════ */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 991px) {
+  .hero-section { 
+    min-height: 60vh; 
+    padding: 100px 0; 
+  }
+  .nav-link { 
+    margin: 8px 0; 
+    border-bottom: 1px solid #f1f5f9; 
+  }
+  .nav-link::after { 
+    display: none; 
+  }
+  .contact-card { 
+    padding: 24px; 
+  }
+}
+
+@media (max-width: 768px) {
+  section { 
+    padding: 60px 0; 
+  }
+  .section-heading { 
+    margin-bottom: 20px; 
+  }
+  .container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
