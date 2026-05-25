@@ -503,6 +503,7 @@ a {
 /* ══════════════════════════════════════════════════════
    PERBAIKAN TYPOGRAPHY KHUSUS HP (TENTANG KAMI)
 ══════════════════════════════════════════════════════ */
+
 @media (max-width: 768px) {
   /* Mengecilkan Judul Utama */
   .section-heading {
@@ -527,5 +528,17 @@ a {
     image-rendering: -webkit-optimize-contrast;
   }
 }
+/* Membuat LI agar tampil persis seperti P */
+.feature-content ul {
+  list-style-type: none; /* Hilangkan titik bullet */
+  padding-left: 0;
+  margin: 0;
+}
 
+.feature-content li {
+  font-size: 0.9rem; /* Ukuran sama dengan P */
+  color: var(--text-muted); /* Warna sama dengan P */
+  line-height: 1.6; /* Spasi antar baris sama dengan P */
+  margin-bottom: 12px; /* Jarak antar baris sama dengan P */
+}
   
