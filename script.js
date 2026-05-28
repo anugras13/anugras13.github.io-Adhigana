@@ -60,3 +60,19 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
+// Membuat objek structured data
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "CV Adhigana Tri Perkasa",
+  "url": "https://adhiganatriperkasa.com/"
+};
+
+// Membuat elemen <script> baru
+const script = document.createElement('script');
+script.type = 'application/ld+json';
+script.textContent = JSON.stringify(structuredData);
+
+// Memasukkan elemen script tersebut ke dalam <head>
+document.head.appendChild(script);
