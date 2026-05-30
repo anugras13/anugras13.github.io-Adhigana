@@ -561,6 +561,17 @@ a {
 
 /* Baris 1: Petro, Kujang, PIM (Gedein dikit) */
 .logo-gede { height: 55px !important; }
+/* Mengatur ukuran logo klien agar lebih besar dan seragam */
+.logo-klien-gede {
+  height: 65px !important; /* Digegein dari standar 45px ke 65px */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Biar gap antar baris lebih luwes */
+.mb-4 {
+  margin-bottom: 2rem !important;
+}
 
 /* Baris 2: Pusri (Ukuran standar) */
 .logo-pusri-biasa { height: 45px !important; }
