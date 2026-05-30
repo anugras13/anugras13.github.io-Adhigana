@@ -1,6 +1,9 @@
-// Navbar Scroll & Active State
+// ══════════════════════════════════════════════════════
+// 1. NAVBAR SCROLL & ACTIVE STATE (FIXED)
+// ══════════════════════════════════════════════════════
 const navbar = document.getElementById('mainNavbar');
-const navLinks = document.querySelectorAll('.nav-link');
+// FIX: Hanya pilih .nav-link yang ada di dalam #mainNavbar agar tidak merusak tombol katalog
+const navLinks = document.querySelectorAll('#mainNavbar .nav-link');
 const sections = document.querySelectorAll('section');
 
 window.addEventListener('scroll', () => {
@@ -11,7 +14,7 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('shadow-sm');
   }
 
-  // Active state update
+  // Active state update berdasarkan section scroll
   let current = '';
   sections.forEach(sec => {
     const top = sec.offsetTop - 100;
@@ -28,7 +31,9 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// Fade Up Animation
+// ══════════════════════════════════════════════════════
+// 2. FADE UP ANIMATION
+// ══════════════════════════════════════════════════════
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -39,55 +44,46 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-/* ── LOGIKA POP-UP / MODAL DETAIL PRODUK ── */
+// ══════════════════════════════════════════════════════
+// 3. LOGIKA POP-UP / MODAL DETAIL PRODUK
+// ══════════════════════════════════════════════════════
 document.addEventListener("DOMContentLoaded", function() {
   const productModal = document.getElementById('productModal');
   
   if (productModal) {
     productModal.addEventListener('show.bs.modal', function (event) {
-      // Menangkap tombol yang diklik
       const button = event.relatedTarget;
-      
-      // Mengambil data dari atribut "data-" di tombol HTML
       const title = button.getAttribute('data-title');
       const imgSrc = button.getAttribute('data-img');
       const fullDesc = button.getAttribute('data-fulldesc');
       
-      // Memasukkan data ke dalam Pop-Up Modal
       document.getElementById('modalTitle').textContent = title;
       document.getElementById('modalImg').src = imgSrc;
       document.getElementById('modalDesc').textContent = fullDesc;
     });
   }
 });
+
 // ══════════════════════════════════════════════════════
-// FORCE RESET TABS (Mencegah Konten Numpuk / Tertinggal)
+// 4. CLEAN RESET TABS USING NATIVE BOOTSTRAP HOOKS (FIXED ANTI-LAG)
 // ══════════════════════════════════════════════════════
 document.addEventListener("DOMContentLoaded", function () {
   const catalogTabs = document.querySelectorAll('.catalog-tab');
   
   catalogTabs.forEach(tab => {
-    tab.addEventListener('click', function () {
-      const targetId = this.getAttribute('data-bs-target');
-      
-      // 1. Paksa SEMUA tab pane sembunyi dulu dan hapus class aktifnya
+    // Menggunakan event resmi 'show.bs.tab' bawaan Bootstrap agar seirama dengan jalannya framework
+    tab.addEventListener('show.bs.tab', function () {
+      // Begitu tombol diklik, bersihkan instan seluruh pane lain sebelum animasi berjalan
       document.querySelectorAll('.tab-content .tab-pane').forEach(pane => {
         pane.classList.remove('active', 'show');
       });
-      
-      // 2. Tampilkan HANYA target yang sedang diklik
-      const targetPane = document.querySelector(targetId);
-      if (targetPane) {
-        // Kasih delay 50ms biar transisinya kelihatan seamless dan gak kaget
-        setTimeout(() => {
-          targetPane.classList.add('active', 'show');
-        }, 50);
-      }
     });
   });
 });
 
-// Membuat objek structured data
+// ══════════════════════════════════════════════════════
+// 5. STRUCTURED DATA FOR SEO
+// ══════════════════════════════════════════════════════
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -95,11 +91,7 @@ const structuredData = {
   "url": "https://adhiganatriperkasa.com/"
 };
 
-// Membuat elemen <script> baru
 const script = document.createElement('script');
 script.type = 'application/ld+json';
 script.textContent = JSON.stringify(structuredData);
-
-// Memasukkan elemen script tersebut ke dalam <head>
 document.head.appendChild(script);
-
