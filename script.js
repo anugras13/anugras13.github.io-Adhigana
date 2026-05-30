@@ -60,7 +60,36 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
-
+// ══════════════════════════════════════════════════════
+// SAFE RESET TABS (Anti Map Kedip / Katutan)
+// ══════════════════════════════════════════════════════
+document.addEventListener("DOMContentLoaded", function () {
+  const catalogTabs = document.querySelectorAll('.catalog-tab');
+  
+  catalogTabs.forEach(tab => {
+    tab.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('data-bs-target');
+      const targetPane = document.querySelector(targetId);
+      
+      // 1. Matikan efek transisi kasar, langsung remove class aktif secara bersih
+      document.querySelectorAll('.tab-content .tab-pane').forEach(pane => {
+        if (pane !== targetPane) {
+          pane.classList.remove('show', 'active');
+        }
+      });
+      
+      // 2. Munculkan target tab tanpa bikin GPU kaget
+      if (targetPane) {
+        targetPane.classList.add('active');
+        // Kasih jeda super mikro sekedipan mata biar layer map gak pecah
+        requestAnimationFrame(() => {
+          targetPane.classList.add('show');
+        });
+      }
+    });
+  });
+});
 // Membuat objek structured data
 const structuredData = {
   "@context": "https://schema.org",
@@ -76,3 +105,4 @@ script.textContent = JSON.stringify(structuredData);
 
 // Memasukkan elemen script tersebut ke dalam <head>
 document.head.appendChild(script);
+
