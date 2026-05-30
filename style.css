@@ -187,28 +187,21 @@ a {
 }
 
 /* ══════════════════════════════════════════════════════
-   5. HERO SECTION
-══════════════════════════════════════════════════════ */
-/* ══════════════════════════════════════════════════════
-   5. HERO SECTION (Dengan Background Gambar & Overlay Biru)
+   5. HERO SECTION (Safe Mobile Parallax Fix)
 ══════════════════════════════════════════════════════ */
 .hero-section {
-  /* Ganti tulisan bg-pabrik.jpg dengan nama file gambarmu nanti */
   background-image: 
     linear-gradient(rgba(40, 83, 148, 0.473), rgba(20, 45, 80, 0.95)), 
     url('src/images/gudanggresikwllpaper.jpeg');
   background-size: cover;
   background-position: center;
-  background-attachment: scroll; /* Bikin efek parallax (gambar diam saat di-scroll) */
   background-repeat: no-repeat;
+  background-attachment: scroll; /* Default scroll aman untuk HP & iOS */
   
-  /* Flexbox untuk memastikan teks selalu di tengah */
   display: flex;
   align-items: center; 
   min-height: 80vh;
   color: #fff;
-  display: flex;
-  align-items: center;
 }
 
 .hero-title {
@@ -225,6 +218,13 @@ a {
   color: rgba(255, 255, 255, 0.9);
   max-width: 600px;
   margin-bottom: 36px;
+}
+
+/* Aktifkan efek fixed/parallax hanya di desktop agar tidak merusak safari iOS */
+@media (min-width: 992px) {
+  .hero-section {
+    background-attachment: fixed;
+  }
 }
 
 /* ══════════════════════════════════════════════════════
@@ -287,6 +287,20 @@ a {
   margin: 0;
 }
 
+/* Membuat LI Misi Tampil Rapi Menggunakan Angka */
+.feature-content ul {
+  list-style-type: decimal; /* Mengembalikan angka 1,2,3 otomatis */
+  padding-left: 20px;
+  margin: 0;
+}
+
+.feature-content li {
+  font-size: 0.9rem; 
+  color: var(--text-muted); 
+  line-height: 1.6; 
+  margin-bottom: 12px; 
+}
+
 /* ══════════════════════════════════════════════════════
    7. CATALOG SECTION 
 ══════════════════════════════════════════════════════ */
@@ -294,17 +308,14 @@ a {
   background-color: var(--bg-light);
 }
 
-/* ══════════════════════════════════════════════════════
-   TABS KATEGORI KATALOG (DIPERBAIKI)
-══════════════════════════════════════════════════════ */
 .catalog-tab {
   font-family: var(--font-main);
   color: var(--text-muted) !important;
   font-weight: 600;
-  border-radius: 50px !important; /* Memaksa bentuk oval/kapsul */
-  padding: 12px 32px !important; /* Padding diperbesar agar teks lega & tidak mepet */
+  border-radius: 50px !important; 
+  padding: 12px 32px !important; 
   margin: 0 6px;
-  border: 1.5px solid #cbd5e1 !important; /* Garis tepi dipertegas */
+  border: 1.5px solid #cbd5e1 !important; 
   background-color: var(--bg-white) !important;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -316,41 +327,11 @@ a {
   background-color: #f8fafc !important;
 }
 
-/* WARNA SAAT DIKLIK / AKTIF (BIRU) */
 .catalog-tab.active {
   background-color: var(--brand-blue) !important;
   color: #ffffff !important;
   border-color: var(--brand-blue) !important;
   box-shadow: 0 4px 15px rgba(40, 84, 148, 0.3) !important;
-}
-
-/* TABS KHUSUS HP (Fit 1 Layar Penuh, Tidak Kepotong, Membagi Rata) */
-@media (max-width: 768px) {
-  #katalog-tabs {
-    flex-wrap: nowrap;
-    overflow: hidden; /* Matikan fitur scroll/geser */
-    justify-content: space-between !important; 
-    padding: 0 12px 16px 12px; /* Jarak aman dari pinggiran layar HP */
-    gap: 6px; /* Jarak antar tombol dirapatkan sedikit */
-  }
-  
-  #katalog-tabs .nav-item { 
-    flex: 1 1 0; /* KUNCI UTAMA: Memaksa 3 tombol membagi layar persis sama rata (masing-masing 33%) */
-    width: 100%;
-  }
-  
-  .catalog-tab {
-    width: 100%;
-    padding: 10px 0 !important; /* Padding horizontal dikosongkan agar teks bebas di tengah */
-    font-size: clamp(0.65rem, 2.8vw, 0.95rem) !important; /* KUNCI FONT: Ukuran font otomatis melar/menyusut mengikuti lebar HP */
-    text-align: center;
-    white-space: nowrap; /* Teks tetap 1 baris */
-    margin: 0;
-  }
-  
-  #katalog-tabs::-webkit-scrollbar { 
-    display: none; 
-  }
 }
 
 /* KARTU PRODUK DESKTOP */
@@ -410,28 +391,6 @@ a {
   line-height: 1.6;
 }
 
-/* KARTU PRODUK KHUSUS HP */
-@media (max-width: 768px) {
-  .product-card-horizontal .product-img-wrap {
-    border-right: none;
-    border-bottom: 1px solid #e2e8f0;
-    padding: 24px;
-    min-height: 200px;
-  }
-  
-  .product-card-horizontal .product-image {
-    max-height: 180px; 
-  }
-  
-  .product-card-horizontal .product-body {
-    padding: 24px;
-  }
-  
-  .product-name {
-    font-size: 1.2rem;
-  }
-}
-
 /* ══════════════════════════════════════════════════════
    8. CONTACT SECTION
 ══════════════════════════════════════════════════════ */
@@ -489,11 +448,48 @@ a {
   transform: translateY(0);
 }
 
+/* --- LOGO PARTNERS & CLIENTS STYLING --- */
+.client-logo-wrapper {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  transition: 0.3s;
+}
+
+.client-logo-wrapper:hover .client-logo {
+  transform: scale(1.05);
+}
+
+/* Ukuran Khusus Custom Sesuai Ralat */
+.holding-logo .client-logo { height: 85px !important; }
+.logo-gede { height: 55px !important; }
+.logo-klien-gede { height: 65px !important; }
+.logo-pusri-biasa { height: 45px !important; }
+.logo-pkt-kecil { height: 35px !important; }
+
+.mb-4 {
+  margin-bottom: 2rem !important;
+}
+
+@media (min-width: 768px) {
+  .col-md-6:first-child {
+    border-right: 1px solid #e2e8f0;
+  }
+}
+
+/* RESPONSIVE LAYOUT UNTUK TABLET & HP */
 @media (max-width: 991px) {
   .hero-section { 
     min-height: 60vh; 
     padding: 100px 0; 
-    background-attachment: fixed;
+    background-attachment: scroll !important; /* Memaksa iOS mematikan parallax bug */
   }
   .nav-link { 
     margin: 8px 0; 
@@ -506,87 +502,69 @@ a {
     padding: 24px; 
   }
 }
-/* ══════════════════════════════════════════════════════
-   PERBAIKAN TYPOGRAPHY KHUSUS HP (TENTANG KAMI)
-══════════════════════════════════════════════════════ */
 
 @media (max-width: 768px) {
-  /* Mengecilkan Judul Utama */
   .section-heading {
     font-size: 1.8rem !important; 
   }
   
-  /* Mengecilkan Teks Paragraf & Dibikin Rata Kanan-Kiri */
   .about-lead, 
   .about-text-body p {
-    font-size: 0.9rem !important; /* Ukuran standar teks bacaan di HP */
-    text-align: justify !important; /* Memaksa rata kanan-kiri */
-    line-height: 1.6 !important; /* Jarak antar baris supaya tidak terlalu rapat */
-    
+    font-size: 0.9rem !important;
+    text-align: justify !important;
+    line-height: 1.6 !important;
   }
-  .product-image {
-    /* Memastikan gambar tidak dipaksa load ukuran aslinya yang besar */
+
+  .feature-item {
+    margin-bottom: 24px;
+  }
+
+  #katalog-tabs {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    justify-content: space-between !important; 
+    padding: 0 12px 16px 12px;
+    gap: 6px;
+  }
+  
+  #katalog-tabs .nav-item { 
+    flex: 1 1 0;
+    width: 100%;
+  }
+  
+  .catalog-tab {
+    width: 100%;
+    padding: 10px 0 !important;
+    font-size: clamp(0.65rem, 2.8vw, 0.95rem) !important;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0;
+  }
+  
+  #katalog-tabs::-webkit-scrollbar { 
+    display: none; 
+  }
+
+  .product-card-horizontal .product-img-wrap {
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 24px;
+    min-height: 200px;
+  }
+  
+  .product-card-horizontal .product-image {
+    max-height: 180px; 
     width: 100%;
     height: auto;
-    /* Memberikan instruksi ke browser untuk rendering lebih ringan */
     will-change: transform; 
-    /* Mengaktifkan kompresi visual agar tetap tajam meski file aslinya besar */
     image-rendering: -webkit-optimize-contrast;
   }
-}
-/* Membuat LI agar tampil persis seperti P */
-.feature-content ul {
-  list-style-type: none; /* Hilangkan titik bullet */
-  padding-left: 0;
-  margin: 0;
-}
-
-.feature-content li {
-  font-size: 0.9rem; /* Ukuran sama dengan P */
-  color: var(--text-muted); /* Warna sama dengan P */
-  line-height: 1.6; /* Spasi antar baris sama dengan P */
-  margin-bottom: 12px; /* Jarak antar baris sama dengan P */
-}
-/* --- CSS TAMBAHAN UNTUK PARTNERS & CLIENTS --- */
-@media (min-width: 768px) {
-  /* Memberikan garis pembatas di tengah kolom hanya saat di desktop */
-  .col-md-6:first-child {
-    border-right: 1px solid #e2e8f0;
+  
+  .product-card-horizontal .product-body {
+    padding: 24px;
+  }
+  
+  .product-name {
+    font-size: 1.2rem;
   }
 }
-
-/* Holding (Paling Gede) */
-.holding-logo .client-logo { height: 85px !important; }
-
-/* Standard logo */
-.client-logo { height: 45px; width: auto; object-fit: contain; }
-
-/* Baris 1: Petro, Kujang, PIM (Gedein dikit) */
-.logo-gede { height: 55px !important; }
-/* Mengatur ukuran logo klien agar lebih besar dan seragam */
-.logo-klien-gede {
-  height: 65px !important; /* Digegein dari standar 45px ke 65px */
-  width: auto;
-  object-fit: contain;
-}
-
-/* Biar gap antar baris lebih luwes */
-.mb-4 {
-  margin-bottom: 2rem !important;
-}
-
-/* Baris 2: Pusri (Ukuran standar) */
-.logo-pusri-biasa { height: 45px !important; }
-
-/* Baris 3: PKT (Kecilin) */
-.logo-pkt-kecil { height: 35px !important; }
-
-/* Wrapper biar tiap baris rapi */
-.client-logo-wrapper {
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-  
