@@ -199,15 +199,16 @@ a {
     url('src/images/gudanggresikwllpaper.jpeg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Bikin efek parallax (gambar diam saat di-scroll) */
+  background-attachment: scroll; /* Bikin efek parallax (gambar diam saat di-scroll) */
   background-repeat: no-repeat;
-  
-  min-height: 80vh;
-  color: #fff;
   
   /* Flexbox untuk memastikan teks selalu di tengah */
   display: flex;
   align-items: center; 
+  min-height: 80vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
 }
 
 .hero-title {
@@ -492,6 +493,7 @@ a {
   .hero-section { 
     min-height: 60vh; 
     padding: 100px 0; 
+    background-attachment: fixed;
   }
   .nav-link { 
     margin: 8px 0; 
