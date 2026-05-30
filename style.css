@@ -489,8 +489,13 @@ a {
   .hero-section { 
     min-height: 60vh; 
     padding: 100px 0; 
-    background-attachment: scroll !important; /* Memaksa iOS mematikan parallax bug */
+    
+    /* Paksa iPhone lepas dari efek fixed dan benerin ukuran gambarnya */
+    background-attachment: scroll !important; 
+    background-size: cover !important;
+    background-position: center center !important;
   }
+  
   .nav-link { 
     margin: 8px 0; 
     border-bottom: 1px solid #f1f5f9; 
